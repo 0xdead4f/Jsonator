@@ -7,21 +7,31 @@ The objective actually to find unexpected behavior of the software or API.
 
 ## Features
 
+- 40 custom json fuzzing technique
 - output in stdout
+- custom input
 
 ## Usage
 
-To start generating fuzzing wordlists, use the following command-line syntax:
+To start generating fuzzing wordlists, define the input first in the ``input.json`` file :
+```
+{
+    "key1":"username",
+    "key2":"password",
+    "value_key1":"admin@admin.com",
+    "value_key1_2":"user@user.com",
+    "value_key2":"Admin123",
+    "value_key2_2":"User123",
+    "ip":"127.0.0.1",
+    "domain":"example.com"
+}
+```
+
+Run the script :
 
 ```bash
-python jsonator.py [key1] [key2] [value1] [value2]
+python jsonator.py 
 ```
-## Examples
-
-Generate wordlist from input:
-  ```bash
-  python jsonator.py username password admin@admin.com user1@user.com
-  ```
 Output :
 ```
 "username": "admin","password": "admin"
