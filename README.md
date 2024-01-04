@@ -1,4 +1,4 @@
-![Alt text](jsonator.png)
+![Jsonator](jsonator.png)
 # Jsonator: JSON Fuzzing Wordlist Generator
 
 Jsonator is a tool designed to generate fuzzing wordlists specifically for JSON data structures. It aids in discovering potential vulnerabilities, misconfigurations, or edge cases in applications that handle JSON data. 
