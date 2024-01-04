@@ -3,10 +3,12 @@ from string import Template
 import json
 
 
+# default credential
 def method1(args):
     payload = f'"{args.key1}": "admin","{args.key2}": "admin"'
     print(template.substitute(payload=payload))
 
+# using null as value without number 1 value
 def method2(args):
     payload = f'"{args.key1}": null,"{args.key2}": null'
     print(template.substitute(payload=payload))
