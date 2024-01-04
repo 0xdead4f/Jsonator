@@ -1,6 +1,6 @@
 import sys
 from string import Template
-
+import json
 
 
 def method1(args):
@@ -20,25 +20,28 @@ def method4(args):
     print(template.substitute(payload=payload))
 
 def method5(args):
+    payload = f'"{args.key1}": "{args.input1}","{args.key2}": ["{args.input2}"]'
+    print(template.substitute(payload=payload))
+
+def method6(args):
     payload = f'"{args.key1}": "{args.input1}","{args.key2}": false'
     print(template.substitute(payload=payload))
 
-if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python jsonator.py <arg1> <arg2> <arg3>")
-        sys.exit(1)
 
-    key1 = sys.argv[1]
-    key2 = sys.argv[2]
-    input1 = sys.argv[3]
-    input2 = sys.argv[4]
+
+if __name__ == "__main__":
+
+    with open('input.json', 'r') as f:
+        data = json.load(f)
 
     class Argument:
         def __init__(self):
-            self.key1 = sys.argv[1]
-            self.key2 = sys.argv[2]
-            self.input1 = sys.argv[3]
-            self.input2 = sys.argv[4]
+            self.key1 = data["key1"]
+            self.key2 = data["key2"]
+            self.input1 = data["value_key1"]
+            self.input2 = data["value_key1_2"]
+            self.input3 = data["value_key2"]
+            self.input4 = data["value_key2_2"]
     
     args = Argument()
     bracket = False
