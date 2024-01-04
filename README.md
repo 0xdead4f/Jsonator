@@ -18,11 +18,20 @@ python jsonator.py [key1] [key2] [value1] [value2]
 ```
 ## Examples
 
-- Generate a basic wordlist:
+Generate wordlist from input:
   ```bash
   python jsonator.py username password admin@admin.com user1@user.com
   ```
-
+Output :
+```
+"username": "admin","password": "admin"
+"username": null,"password": null
+"username": "admin@admin.com","password": null
+"username": "admin@admin.com","password": true
+...
+...
+...
+```
 ## Contributing
 
 Contributions are welcome! Please read the [Contribution Guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
