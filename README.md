@@ -44,5 +44,5 @@ Output :
 ```
 ## Contributing
 
-Contributions are welcome! Please read the [Contribution Guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
+Contributions are welcome! 
 
