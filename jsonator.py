@@ -144,7 +144,7 @@ payload = [{
         "payload": f'"{args.key1}": "{args.ssrf_domain}","{args.key2}": "{args.ssrf_domain}"'
     },{
         "desc":"Exponential as value",
-        "payload": f'"{args.key1}": -1e+30","{args.key2}": -1e+30'
+        "payload": f'"{args.key1}": -1e+30,"{args.key2}": -1e+30'
     },
 ]
 
